@@ -38,6 +38,7 @@ export default {
   "Length":"Length",
   "Lines":"Lines",
   "Load project": "Load project",
+  "Select Background Image or PDF file": "Select Background Image or PDF file",
   "Mouse X Coordinate":"Mouse X Coordinate",
   "Mouse Y Coordinate":"Mouse Y Coordinate",
   "Name": "Name",

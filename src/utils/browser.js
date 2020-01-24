@@ -35,3 +35,25 @@ export function browserUpload() {
     fileInput.click();
   });
 }
+
+export function browserSelectBackground() {
+  return new Promise(function (resolve, reject) {
+
+    let fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/png, application/pdf';
+
+    fileInput.addEventListener('change', function (event) {
+      let file = event.target.files[0];
+      let reader = new FileReader();
+      reader.addEventListener('load', (fileEvent) => {
+        let loadedData = fileEvent.target.result;
+        resolve(loadedData);
+      });
+      reader.readAsText(file);
+    });
+
+    fileInput.click();
+  });
+}
+
